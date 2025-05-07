@@ -24,6 +24,7 @@ jobs:
           docker push $DOCKERHUB_USERNAME/$IMAGE_NAME:latest
 
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
